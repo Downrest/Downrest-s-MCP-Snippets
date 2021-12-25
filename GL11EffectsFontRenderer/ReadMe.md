@@ -1,6 +1,7 @@
 # GL11 Effects Font Renderer
 Adds additional string options, as of now it includes:
 * drawShakingString
+* drawRainbowString
 ### Instructions:
 Put it somewhere on FontRenderer.java.
 ### Example:
