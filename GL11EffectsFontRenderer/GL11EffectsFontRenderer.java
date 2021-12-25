@@ -1,4 +1,5 @@
 /// GL11 EFFECTS PACKAGE - AUTHOR: DOWNREST ///
+// ! PUT THIS ON FONTRENDERER.JAVA (OR ANY OTHER CLASS IF YOU WANT) ! //
     
     /**
      * Draws the specified string with a configurable shaking effect
