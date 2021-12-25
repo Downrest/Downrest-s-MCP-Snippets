@@ -43,4 +43,38 @@
         return i;
     }
 
+    /**
+     * Draws the specified string with a configurable rainbow effect
+     * @author Downrest
+     * 
+     */
+    public int drawRainbowString(String text, float textSize, int x, int y, boolean dropShadow, int rainbowSpeed)
+    {
+        return this.drawRainbowString(text, textSize, (float)x, (float)y, dropShadow, (float)rainbowSpeed);
+    }
+    
+    /**
+     * Draws the specified string with a configurable rainbow effect
+     * @author Downrest
+     * 
+     */
+    public int drawRainbowString(String text, float textSize, float x, float y, boolean dropShadow, float rainbowSpeed)
+    {
+        GlStateManager.enableAlpha();
+        this.resetStyles();
+        int i;
+
+        if (dropShadow)
+        {
+            i = this.renderString(text, x + 1.0F, y + 1.0F, Color.HSBtoRGB((float)(System.currentTimeMillis() % 1000L) / 1000.0F, rainbowSpeed, rainbowSpeed), true);
+            i = Math.max(i, this.renderString(text, x, y, Color.HSBtoRGB((float)(System.currentTimeMillis() % 1000L) / 1000.0F, rainbowSpeed, rainbowSpeed), false));       
+        }
+        else
+        {
+            i = this.renderString(text, x, y, Color.HSBtoRGB((float)(System.currentTimeMillis() % 1000L) / 1000.0F, rainbowSpeed, rainbowSpeed), false);          
+        }
+
+        return i;
+    }
+
     /// GL11 EFFECTS PACKAGE - AUTHOR: DOWNREST ///
