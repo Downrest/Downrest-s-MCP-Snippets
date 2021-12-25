@@ -1,4 +1,4 @@
-# GL11 Effects Font Renderer
+# Effects Font Renderer
 Adds additional string options, as of now it includes:
 * drawShakingString
 * drawRainbowString
